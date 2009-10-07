@@ -9,7 +9,7 @@ Summary:	Math::Project3D - Project functions of multiple parameters from R^3 ont
 Summary(pl.UTF-8):	Math::Project3D - rzutowanie funkcji wieloparametrowych z R^3 na dowolną powierzchnię
 Name:		perl-Math-Project3D
 Version:	1.02
-Release:	0.1
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -18,6 +18,9 @@ Source0:	http://www.cpan.org/modules/by-module/Math/%{pdir}-%{pnam}-%{version}.t
 URL:		http://search.cpan.org/dist/Math-Project3D/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+%if %{with tests}
+BuildRequires:	perl(Math::MatrixReal) >= 1.9
+%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
