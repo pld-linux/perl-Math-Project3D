@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	Math
 %define	pnam	Project3D
 Summary:	Math::Project3D - Project functions of multiple parameters from R^3 onto an arbitrary plane
